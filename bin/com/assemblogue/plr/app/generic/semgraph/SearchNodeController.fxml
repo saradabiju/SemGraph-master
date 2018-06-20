@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.assemblogue.plr.app.generic.semgraph.SearchNodeController">
+
+  <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+
+  <top>
+	<VBox spacing="5">
+      <Label text="" />
+	</VBox>
+  </top>
+
+  <center>
+	<VBox spacing="5">
+	  <children>
+		<VBox spacing="20">
+		  <HBox alignment="CENTER" spacing="10">
+			<Label text = "%node.search.dlg.pname" prefWidth="70" />
+			<TextField fx:id="search_key" prefWidth="300" promptText="%node.search.dlg.pname.def" focusTraversable="false"/>
+		  </HBox>
+			<HBox alignment="CENTER" spacing="10">
+			  <Label text = "%node.search.dlg.pvalue" prefWidth="70" />
+			  <TextField fx:id="search_value" prefWidth="300"  promptText="%node.search.dlg.pvalue.def" focusTraversable="false" />
+			</HBox>
+		</VBox>
+	  </children>
+	</VBox>
+  </center>
+
+  <bottom>
+	<VBox spacing="10">
+        <HBox alignment="CENTER" spacing="20">
+          <Button fx:id="snodeCancel" text="%btn.cancel" focusTraversable="false" />
+          <Button fx:id="snodeSearch" text="%btn.search" focusTraversable="false" />
+		</HBox>
+        <HBox alignment="CENTER">
+		</HBox>
+	</VBox>
+  </bottom>
+</BorderPane>

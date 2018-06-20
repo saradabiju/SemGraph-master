@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemblogue.plr.app.generic.semgraph.CreateGraphController">
+
+  <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+
+  <top>
+	<VBox spacing="5">
+   <children>
+         <Label text="" />
+   </children>
+	</VBox>
+  </top>
+
+  <center>
+	<VBox spacing="5">
+	  <children>
+		<VBox spacing="20">
+   <children>
+   		  <HBox alignment="CENTER" spacing="10">
+      <children>
+      			<Label prefWidth="60" text="%graph.create.dlg.name" />
+      			<TextField fx:id="graphName" focusTraversable="false" prefWidth="300" promptText="%graph.create.dlg.name.def" />
+      </children>
+   		  </HBox>
+   </children>
+		</VBox>
+	  </children>
+	</VBox>
+  </center>
+
+  <bottom>
+	<VBox spacing="10">
+   <children>
+           <HBox alignment="CENTER" spacing="20">
+              <children>
+                <Button fx:id="graphCancel" focusTraversable="false" text="%btn.cancel" />
+                <Button fx:id="graphCreate" focusTraversable="false" text="%btn.create" />
+              </children>
+   		</HBox>
+           <HBox alignment="CENTER">
+		</HBox>
+   </children>
+	</VBox>
+  </bottom>
+</BorderPane>

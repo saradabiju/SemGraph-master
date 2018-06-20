@@ -1,0 +1,1004 @@
+{
+   "@context" : "plr://PUBLIC/ontologies/menuContext.jsonld",
+   "@id" : "DG",
+   "@type" : "Ontology",
+   "defines" : [
+      {
+         "@id" : "#Entity",
+         "@type" : "Class",
+         "label" : {
+            "" : "Entity",
+            "ja" : "実体"
+         },
+         "subClassOf" : [
+            {
+               "@type" : "Restriction",
+               "cardinality" : 1,
+               "onProperty" : "#begin"
+            },
+            {
+               "@type" : "Restriction",
+               "maxCardinality" : 1,
+               "onProperty" : "#end"
+            },
+            {
+               "@type" : "Restriction",
+               "cardinality" : 1,
+               "invisible" : true,
+               "onProperty" : "#creator"
+            },
+            {
+               "@type" : "Restriction",
+               "maxCardinality" : 1,
+               "onProperty" : "#cnt"
+            },
+            {
+               "@type" : "Restriction",
+               "maxCardinality" : 1,
+               "onProperty" : "#share"
+            },
+            {
+               "@type" : "Restriction",
+               "maxCardinality" : 1,
+               "onProperty" : "#unshare"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#rel"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#discourseRelation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#additive"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#positiveAdditive"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#conjunction"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#addition"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#proportion"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#similar"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#manner"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#suppliment"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#background"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#equal"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#elaboration"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#specific"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#part"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#member"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#example"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#extraction"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#minimum"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#step"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#content"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#definition"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#negativeAdditive"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#contrast"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#disjunction"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#comparison"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#letAlone"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#dissimilar"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#substitution"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#constraint"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#causal"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#positiveCausal"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#causes"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#conclusion"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#triggers"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#purpose"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#enables"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#conditional"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#explanation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#evaluation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#negativeCausal"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#conflict"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#unconditional"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#compromise"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#dialogueAct"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#response"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#approval"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#disapproval"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#solution"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#temporalRelation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#before"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#sametime"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#situation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#otherRelation"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#object"
+            },
+            {
+               "@type" : "Restriction",
+               "onProperty" : "#uncertain"
+            }
+         ]
+      },
+      {
+         "@id" : "#begin",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "begin",
+            "ja" : "開始"
+         },
+         "range" : "dateTime"
+      },
+      {
+         "@id" : "#end",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "end",
+            "ja" : "終了"
+         },
+         "range" : "dateTime"
+      },
+      {
+         "@id" : "#creator",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "reporter",
+            "ja" : "記録者"
+         },
+         "range" : "string"
+      },
+      {
+         "@id" : "#cnt",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "内容"
+         },
+         "range" : "mmdata"
+      },
+      {
+         "@id" : "#share",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "share",
+            "ja" : "共有"
+         },
+         "range" : "string"
+      },
+      {
+         "@id" : "#unshare",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "unshare",
+            "ja" : "非共有"
+         },
+         "range" : "string"
+      },
+      {
+         "@id" : "#rel",
+         "@type" : "ObjectProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "relation",
+            "ja" : "関係"
+         },
+         "range" : "#Entity"
+      },
+      {
+         "@id" : "#discourseRelation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "discourse relation",
+            "ja" : "談話関係"
+         },
+         "subPropertyOf" : [
+            "#rel"
+         ]
+      },
+      {
+         "@id" : "#additive",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "additive relation",
+            "ja" : "付加的関係"
+         },
+         "subPropertyOf" : [
+            "#discourseRelation"
+         ]
+      },
+      {
+         "@id" : "#positiveAdditive",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "positive additive relation",
+            "ja" : "正付加関係"
+         },
+         "subPropertyOf" : [
+            "#additive"
+         ]
+      },
+      {
+         "@id" : "#conjunction",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "and",
+            "ja" : "かつ"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#addition",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "also",
+            "ja" : "追加"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#proportion",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "proportion",
+            "ja" : "比例"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#similar",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "similar",
+            "ja" : "類似"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#manner",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "manner",
+            "ja" : "様態"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#suppliment",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "supplement",
+            "ja" : "補充"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#background",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "bg",
+            "ja" : "背景"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#equal",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "eq",
+            "ja" : "等価"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#elaboration",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "elaboration",
+            "ja" : "詳細"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#specific",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "specific",
+            "ja" : "具体論"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#part",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "part",
+            "ja" : "部分"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#member",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "member",
+            "ja" : "要素"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#example",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "eg",
+            "ja" : "例"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#extraction",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "extraction",
+            "ja" : "特に"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#minimum",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "atLeast",
+            "ja" : "少なくとも"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#step",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "step",
+            "ja" : "ステップ"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#content",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "content",
+            "ja" : "内容"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#definition",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "def",
+            "ja" : "定義"
+         },
+         "subPropertyOf" : [
+            "#positiveAdditive"
+         ]
+      },
+      {
+         "@id" : "#negativeAdditive",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "negative additive relation",
+            "ja" : "負付加関係"
+         },
+         "subPropertyOf" : [
+            "#additive"
+         ]
+      },
+      {
+         "@id" : "#contrast",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "contrast",
+            "ja" : "対照"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#disjunction",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "or",
+            "ja" : "または"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#comparison",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "comparison",
+            "ja" : "比較"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#letAlone",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "letAlone",
+            "ja" : "ましてや"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#dissimilar",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "unlike",
+            "ja" : "相違"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#substitution",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "rather",
+            "ja" : "むしろ"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#constraint",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "though",
+            "ja" : "ただし"
+         },
+         "subPropertyOf" : [
+            "#negativeAdditive"
+         ]
+      },
+      {
+         "@id" : "#causal",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "causal relation",
+            "ja" : "因果的関係"
+         },
+         "subPropertyOf" : [
+            "#discourseRelation"
+         ]
+      },
+      {
+         "@id" : "#positiveCausal",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "positive causal relation",
+            "ja" : "正因果関係"
+         },
+         "subPropertyOf" : [
+            "#causal"
+         ]
+      },
+      {
+         "@id" : "#causes",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "causes",
+            "ja" : "引き起こす"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#conclusion",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "hence",
+            "ja" : "推論"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#triggers",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "asAResult",
+            "ja" : "その結果"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#purpose",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "purpose",
+            "ja" : "目的"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#enables",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "enables",
+            "ja" : "可能化"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#conditional",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "conditional",
+            "ja" : "ならば"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#explanation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "explanation",
+            "ja" : "説明"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#evaluation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "evaluation",
+            "ja" : "評価"
+         },
+         "subPropertyOf" : [
+            "#positiveCausal"
+         ]
+      },
+      {
+         "@id" : "#negativeCausal",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "negative causal relation",
+            "ja" : "負因果関係"
+         },
+         "subPropertyOf" : [
+            "#causal"
+         ]
+      },
+      {
+         "@id" : "#conflict",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "conflict",
+            "ja" : "相反"
+         },
+         "subPropertyOf" : [
+            "#negativeCausal"
+         ]
+      },
+      {
+         "@id" : "#unconditional",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "uncond",
+            "ja" : "によらず"
+         },
+         "subPropertyOf" : [
+            "#negativeCausal"
+         ]
+      },
+      {
+         "@id" : "#compromise",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "compromize",
+            "ja" : "譲歩"
+         },
+         "subPropertyOf" : [
+            "#negativeCausal"
+         ]
+      },
+      {
+         "@id" : "#dialogueAct",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "dialogue act",
+            "ja" : "対話行為"
+         },
+         "subPropertyOf" : [
+            "#rel"
+         ]
+      },
+      {
+         "@id" : "#response",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "response",
+            "ja" : "返答"
+         },
+         "subPropertyOf" : [
+            "#dialogueAct"
+         ]
+      },
+      {
+         "@id" : "#approval",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "yes",
+            "ja" : "はい"
+         },
+         "subPropertyOf" : [
+            "#dialogueAct"
+         ]
+      },
+      {
+         "@id" : "#disapproval",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "no",
+            "ja" : "いいえ"
+         },
+         "subPropertyOf" : [
+            "#dialogueAct"
+         ]
+      },
+      {
+         "@id" : "#solution",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "solution",
+            "ja" : "解決案"
+         },
+         "subPropertyOf" : [
+            "#dialogueAct"
+         ]
+      },
+      {
+         "@id" : "#temporalRelation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "temporal relation",
+            "ja" : "時間関係"
+         },
+         "subPropertyOf" : [
+            "#rel"
+         ]
+      },
+      {
+         "@id" : "#before",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "before",
+            "ja" : "後"
+         },
+         "subPropertyOf" : [
+            "#temporalRelation"
+         ]
+      },
+      {
+         "@id" : "#sametime",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "sametime",
+            "ja" : "同時"
+         },
+         "subPropertyOf" : [
+            "#temporalRelation"
+         ]
+      },
+      {
+         "@id" : "#situation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "situation",
+            "ja" : "状況"
+         },
+         "subPropertyOf" : [
+            "#temporalRelation"
+         ]
+      },
+      {
+         "@id" : "#otherRelation",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "other relation",
+            "ja" : "他の関係"
+         },
+         "subPropertyOf" : [
+            "#rel"
+         ]
+      },
+      {
+         "@id" : "#object",
+         "@type" : "Property",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "object",
+            "ja" : "対象"
+         },
+         "subPropertyOf" : [
+            "#otherRelation"
+         ]
+      },
+      {
+         "@id" : "#uncertain",
+         "@type" : "SymmetricProperty",
+         "domain" : "#Entity",
+         "label" : {
+            "" : "?"
+         },
+         "subPropertyOf" : [
+            "#otherRelation"
+         ]
+      }
+   ],
+   "label" : {
+      "" : "Discourse Graph",
+      "ja" : "談話グラフ"
+   }
+}

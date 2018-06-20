@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.+'
+    }
+}
+
+apply plugin: 'application'
+apply plugin: 'distribution'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+version = '0.1'
+mainClassName = 'com.assemblogue.plr.app.generic.semgraph.App'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+processResources {
+    destinationDir = buildDir
+    from('src/main/java/') {
+        include '**/*.properties'
+        include '**/*.css'
+        include '**/*.fxml'
+        include '**/*.jsonld'
+        into 'classes/main'
+    }
+}

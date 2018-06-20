@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="143.0" styleClass="dragicon" stylesheets="@app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="96.0" prefWidth="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="130.0">
+               <children>
+                  <AnchorPane fx:id="left_link_handle" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="left-link-handle" />
+                  <AnchorPane fx:id="right_link_handle" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="right-link-handle">
+                     <effect>
+                        <Shadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+                  <Label fx:id="close_button" alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="67.0" text="X" textAlignment="RIGHT">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="title_bar" prefHeight="50.0" prefWidth="130.0" />
+            <ChoiceBox fx:id="choicebox" maxHeight="39.0" prefHeight="39.0" prefWidth="145.0" />
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <Blend mode="BLUE">
+         <topInput>
+            <SepiaTone />
+         </topInput></Blend>
+   </effect>
+</fx:root>

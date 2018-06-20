@@ -1,0 +1,28 @@
+1. 
+https://drive.google.com/drive/folders/0B9pvz6IuOetOVGp3c2NyX2dZWmM から 
+plr2_lib_generic-<version>.jar をダウンロードして 
+libs/ に置いてください。
+
+2. ./gradlew shadowJar を実行してください。
+
+3. java -jar build/libs/SemGraph-*-all.jar を実行してください。
+
+
+下記の環境でビルドを確認しました。
+
+------------------------------------------------------------
+Gradle 3.5.1
+------------------------------------------------------------
+
+Build time:   2017-06-16 14:36:27 UTC
+Revision:     d4c3bb4eac74bd0a3c70a0d213709e484193e251
+
+Groovy:       2.4.10
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_144 (Oracle Corporation 25.144-b01)
+OS:           Linux 4.13.0-16-generic amd64
+
+openjdk version "1.8.0_144"
+OpenJDK Runtime Environment (build 1.8.0_144-8u144-b01-2-b01)
+OpenJDK 64-Bit Server VM (build 25.144-b01, mixed mode)
+

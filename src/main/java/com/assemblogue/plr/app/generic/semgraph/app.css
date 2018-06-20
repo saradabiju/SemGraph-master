@@ -1,0 +1,104 @@
+
+
+.scene {
+    -fx-font: 12pt "Serif";
+    -fx-accent: #0093ff;
+    -fx-base: #d0d0d0;
+    /* -fx-background: #67644e;  -fx-control-inner-background: white;*/
+       -fx-padding: 10;
+
+     -fx-background-color: rgba(255,255,255,0.0);
+    -fx-focus-color: #0093ff;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: #292929;
+    -fx-light-text-color: green;
+    -fx-fill: radial-gradient(focus-angle 45deg, focus-distance 20%, center 25% 25%, radius 50%, reflect, #eeeeee88, #55555588 75%, blue);
+  -fx-arc-width:25;
+  -fx-arc-height:25;
+
+}
+
+ToolBar HBox {
+    -fx-spacing: 5;
+    -fx-background-color: steelblue;
+
+}
+
+ToolBar Button {
+    -fx-pref-width: 24;
+    -fx-pref-height: 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    -fx-opacity: 0.7;
+    -fx-focus-traversable: false;
+}
+
+ToolBar Button:disabled {
+    -fx-opacity: 0.35;
+}
+
+ToolBar Button:hover {
+    -fx-opacity: 0.9;
+}
+
+ToolBar Separator {
+    -fx-orientation: vertical;
+    -fx-padding: 0 0 0 4;
+}
+.dragicon {
+	-fx-background-radius: 10;
+}
+
+.cubic-icon {
+	-fx-fill:
+	rgba(80.0, 80.0, 80.0, 0.0);
+
+	-fx-stroke: black;
+}
+
+.node-overlay {
+	-fx-background-radius: 10 10 0 0;
+	-fx-background-color:
+	linear-gradient(to bottom, rgba(255,255,255,0.7) 15%, rgba(50,100,150,0.45) 100%);
+
+}
+
+.right-link-handle:hover {
+	-fx-background-radius: 0 0 10 0;
+	-fx-background-color:
+	rgba(255, 255, 255, 0.35);
+}
+
+.left-link-handle:hover {
+	-fx-background-radius: 0 0 0 10;
+	-fx-background-color:
+	rgba(255, 255, 255, 0.35);
+}
+
+.icon-blue {
+	-fx-background-color: blue;
+}
+
+.icon-red {
+	-fx-background-color: red;
+}
+
+.icon-green {
+	-fx-background-color: green;
+}
+
+.icon-black {
+	-fx-background-color: black;
+}
+
+.icon-grey {
+	-fx-background-color: grey;
+}
+
+.icon-yellow {
+	-fx-background-color: yellow;
+}
+
+.icon-purple {
+	-fx-background-color: purple;
+}

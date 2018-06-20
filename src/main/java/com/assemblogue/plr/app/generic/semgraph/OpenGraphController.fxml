@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.assemblogue.plr.app.generic.semgraph.OpenGraphController">
+
+  <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+
+  <top>
+	<VBox spacing="5">
+      <Label text="" />
+	</VBox>
+  </top>
+
+  <center>
+	<VBox spacing="5">
+	  <children>
+		<VBox spacing="20">
+		  <HBox alignment="CENTER" spacing="10">
+			<Label text = "%graph.open.dlg.uri" prefWidth="120"/>
+			<TextField fx:id="graph_uri" prefWidth="300" promptText="%graph.open.dlg.uri.def" focusTraversable="false" />
+			<Button fx:id="graphRefButton" text="%btn.ref" focusTraversable="false" />
+		  </HBox>
+		</VBox>
+	  </children>
+	</VBox>
+  </center>
+
+  <bottom>
+	<VBox spacing="10">
+        <HBox alignment="CENTER" spacing="20">
+          <Button fx:id="graphCancel" text="%btn.cancel" focusTraversable="false" />
+          <Button fx:id="graphApply" text="%btn.open" focusTraversable="false" />
+		</HBox>
+        <HBox alignment="CENTER">
+		</HBox>
+	</VBox>
+  </bottom>
+</BorderPane>

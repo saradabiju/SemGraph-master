@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.assemblogue.plr.app.generic.semgraph.OtldrController">
+
+  <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+
+  <top>
+	<VBox spacing="5">
+      <Label text="" />
+	</VBox>
+  </top>
+
+  <center>
+	<VBox spacing="5">
+	  <children>
+		<VBox spacing="20">
+		  <HBox alignment="CENTER" spacing="10">
+			<Label text = "%ontology.dlg.ontology" prefWidth="100" />
+			<TextField fx:id="ontology_uri" prefWidth="400" promptText="%ontology.dlg.ontology.def" focusTraversable="false" />
+            <Button fx:id="ontRefButton" text="%btn.ref" focusTraversable="false" />
+		  </HBox>
+		</VBox>
+	  </children>
+	</VBox>
+  </center>
+
+  <bottom>
+	<VBox spacing="10">
+        <HBox alignment="CENTER" spacing="20">
+          <Button fx:id="otldrCansel" text="%btn.cansel" focusTraversable="false" />
+          <Button fx:id="otldrApply" text="%btn.apply" focusTraversable="false" />
+		</HBox>
+        <HBox alignment="CENTER">
+		</HBox>
+	</VBox>
+  </bottom>
+</BorderPane>

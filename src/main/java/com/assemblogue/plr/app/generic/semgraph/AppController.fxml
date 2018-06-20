@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.assemblogue.plr.app.generic.semgraph.LogTextArea?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.assemblogue.plr.app.generic.semgraph.AppController">
+
+  <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+
+  <top>
+
+    <VBox>
+      <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="true" text="%menu.graph.text">
+                <items>
+                    <MenuItem fx:id="menuItemGraphCreate"
+                              text="%menuItem.graph.create"
+                              accelerator="Shortcut+N"
+                    />
+                    <MenuItem fx:id="menuItemGraphOpen"
+                              text="%menuItem.graph.open"
+                              accelerator="Shortcut+O"
+                    />
+                    <MenuItem fx:id="menuItemNodeSearch"
+                              text="%menuItem.node.search"
+                              accelerator="Shortcut+F"
+                    />
+                </items>
+            </Menu>
+
+            <Menu mnemonicParsing="true" text="%menu.setting.text">
+                <items>
+                    <MenuItem fx:id="menuItemCloudSetting"
+                              text="%menuItem.cloudSetting.text" />
+                </items>
+                <items>
+                    <MenuItem fx:id="menuItemAcknowlegements"
+                              text="%menuItem.ackowlegements.text" />
+                </items>
+            </Menu>
+
+        </menus>
+      </MenuBar>
+   </VBox>
+   </top>
+
+  <center>
+	<VBox spacing="5">
+	  <children>
+		<LogTextArea fx:id="logView" prefWidth="420" prefHeight="640" editable="false" text="PLR Distributed semantic editor" focusTraversable="false"/>
+	  </children>
+	</VBox>
+  </center>
+
+  <bottom>
+	<VBox spacing="5">
+	</VBox>
+  </bottom>
+</BorderPane>
