@@ -8,42 +8,39 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<fx:root fx:id="root_pane" minHeight="200.0" minWidth="200.0" stylesheets="@app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <SplitPane fx:id="base_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane fx:id="right_pane" prefHeight="198.0" prefWidth="81.0">
+
+<fx:root hbarPolicy="ALWAYS" pannable="true" type="ScrollPane" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <javafx.scene.layout.AnchorPane fx:id="root_pane" minHeight="200.0" minWidth="200.0" stylesheets="@app.css">
+         <children>
+            <AnchorPane fx:id="right_pane" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ScrollPane fitToHeight="true" hbarPolicy="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="198.0" prefWidth="2.0" vbarPolicy="ALWAYS">
-                     <padding>
-                        <Insets left="8.0" top="6.0" />
-                     </padding>
-                  </ScrollPane>
-               </children></AnchorPane>
-        </items>
-      </SplitPane>
-      <MenuBar minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="2000.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </children>
-   <effect>
-      <SepiaTone level="0.17" />
-   </effect>
+                  <MenuBar minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="2000.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Save" />
+                              <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <SepiaTone level="0.17" />
+         </effect>
+      </javafx.scene.layout.AnchorPane>
+   </content>
 </fx:root>

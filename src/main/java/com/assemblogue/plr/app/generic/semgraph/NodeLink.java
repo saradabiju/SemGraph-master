@@ -129,6 +129,7 @@ public class NodeLink extends AnchorPane {
 		// arrow.setLayoutY(endPoint.getY()/2);
 		source.registerLink(getId());
 		target.registerLink(getId());
+		System.out.println("target" +getId());
 	}
 
 }

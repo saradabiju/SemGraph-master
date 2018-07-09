@@ -33,7 +33,7 @@ public class CreateGraphController implements Initializable {
     }
 
 	private void initializeUI() {
-		
+
         graphCancel.setOnAction(mouseEvent -> exec_cancel());
         graphCreate.setOnAction(mouseEvent -> exec_create());
         System.out.println("INtialize UI");
@@ -58,8 +58,8 @@ public class CreateGraphController implements Initializable {
             name = Messages.getString("nodepain.noname");
         }
         stage.getIcons().add(new Image(App.class.getResourceAsStream("editor.jpg")));
-        appcontroller.createNewGraph(graphname);
-        //appcontroller.createGraph(name);
+        //appcontroller.createNewGraph(graphname);
+       appcontroller.createGraph(name);
         stage.close();
     }
 }

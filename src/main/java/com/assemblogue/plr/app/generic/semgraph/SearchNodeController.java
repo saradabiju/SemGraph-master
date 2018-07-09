@@ -37,7 +37,7 @@ public class SearchNodeController implements Initializable {
     private ObservableList<NodeCell> nodelistItems;
 
     // NodeCellとNodePainControllerの紐つけ
-    private Map<NodeCell,NodePainController> mapNpc = new HashMap<>();
+    private Map<NodeCell,RootLayout> mapNpc = new HashMap<>();
 
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -71,7 +71,7 @@ public class SearchNodeController implements Initializable {
      * ノード内容の検索
      * @return
      */
-    private List<NodeCell> getNodeCells() {
+ /*   private List<NodeCell> getNodeCells() {
         String key = search_key.getText();
         String value = search_value.getText();
 
@@ -84,19 +84,19 @@ public class SearchNodeController implements Initializable {
         List<GraphActor> flndacts = GraphManager.getOpenedGraphList();
         // グラフ中のノードの属性を検索し、返値リストを作成
         for (GraphActor flndact : flndacts) {
-            NodePainController npctrl = GraphManager.getNodePainController(flndact);
-            if (npctrl == null) {
+           RootLayout rootlayout = GraphManager.getRootlayout(flndact);
+            if (rootlayout == null) {
                 continue;
             }
 
-            List<NodeCell> list_ndc = npctrl.getNodeCells();
+          //  List<NodeCell> list_ndc = rootlayout.getNodeCells();
 
-            for (NodeCell ndc : list_ndc) {
-                String v = npctrl.getValue(ndc, key);
+          /  for (NodeCell ndc : list_ndc) {
+             //   String v = rootlayout.getValue(ndc, key);
                 if (v != null && v.contains(value)) {
                     if (!nodes.containsKey(ndc.node)) {
                         results.add(ndc);
-                        mapNpc.put(ndc, npctrl);
+                        mapNpc.put(ndc, rootlayout);
                         nodes.put(ndc.node, ndc.node);
                     }
                 }
@@ -105,7 +105,7 @@ public class SearchNodeController implements Initializable {
 
         return results;
     }
-
+*/
     /**
      * ノード一覧表示名の更新
      */
@@ -117,7 +117,7 @@ public class SearchNodeController implements Initializable {
         }
 
         nodelistItems.clear();
-        nodelistItems.addAll(getNodeCells());
+     //   nodelistItems.addAll(getNodeCells());
     }
 
     /**
@@ -167,9 +167,9 @@ public class SearchNodeController implements Initializable {
                     }
                 });
                 // 編集対象ノードのNodePainControllerを使う
-                NodePainController npc = mapNpc.get(ndc);
-                if (npc != null) {
-                    npc.property(stg, ndc.node, ndc.ontMenu);
+                RootLayout rootlayout = mapNpc.get(ndc);
+                if (rootlayout != null) {
+                  //  rootlayout.property(stg, ndc.node, ndc.ontMenu);
                 }
             }
         });
@@ -178,8 +178,8 @@ public class SearchNodeController implements Initializable {
         item2.setOnAction((javafx.event.ActionEvent t) -> {
             NodeCell ndc = NodeCell.getSelectedItem(nodelist);
             if (mapNpc.containsKey(ndc)) {
-                NodePainController npc = mapNpc.get(ndc);
-                npc.target(ndc);
+                RootLayout rootlayout = mapNpc.get(ndc);
+               // rootlayout.target(ndc);
             }
         });
 

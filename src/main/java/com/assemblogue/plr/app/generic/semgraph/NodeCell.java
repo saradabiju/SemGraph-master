@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -16,7 +17,7 @@ import java.util.List;
  * 内部ノードとボタンの紐つけ
  * @author <a href="mailto:kaneko@cri-mw.co.jp">KANEKO, yukinori</a>
  */
-public class NodeCell {
+public class NodeCell extends AnchorPane{
     // 表示レイアウト
     public HBox hbox;
     public VBox vbox;
@@ -57,21 +58,23 @@ public class NodeCell {
 
         this.hbox.setStyle(AppProperty.BOX_STYLE_FILL_WHITE);
         HBox btn_box = new HBox(); // ラベル用HBox
-        btn_box.getChildren().add(this.btn);
+        //btn_box.getChildren().add(this.btn);
         btn_box.setStyle(AppProperty.BOX_STYLE);
-        this.hbox.getChildren().add(btn_box);
+        //this.hbox.getChildren().add(btn_box);
 
         this.vbox = new VBox();
         this.vbox.setAlignment(Pos.CENTER_LEFT); // 縦中央、横左寄せ
 
         if (parent != null) {
-            parent.child.add(this);
+           // parent.child.add(this);
         }
 
         // 参照元のノードを統一する
         GraphManager.nodepalette.setContentsString(this.node, "");
         this.dispStr = GraphManager.nodepalette.getContents(this.node);
+        if(this.dispStr != null) { // I added this null check
         this.btn.textProperty().bind(this.dispStr);
+        }
     }
 
     /**
@@ -162,6 +165,7 @@ public class NodeCell {
             if (!empty) {
                 setText(ndc.dispStr.getValue());
             }
+
         }
     }
 

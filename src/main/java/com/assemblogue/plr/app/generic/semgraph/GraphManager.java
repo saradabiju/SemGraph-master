@@ -1,3 +1,4 @@
+
 package com.assemblogue.plr.app.generic.semgraph;
 
 import com.assemblogue.plr.lib.EntityNode;
@@ -21,11 +22,12 @@ public class GraphManager {
     // ハイパーノード、ノード検索向け
     static class GraphPain {
         GraphActor graph;
-        NodePainController ctrlr;
+        //NodePainController ctrlr;
+        RootLayout rootlayout;
 
-        GraphPain(GraphActor graph, NodePainController ctrl) {
+        GraphPain(GraphActor graph, RootLayout rootlay) {
             this.graph = graph;
-            this.ctrlr = ctrl;
+            this.rootlayout = rootlay;
         }
     };
 
@@ -59,8 +61,8 @@ public class GraphManager {
      * グラフの多重オープンチェック
      * @param grpact オープンしたグラフ
      */
-	public static synchronized void open(GraphActor grpact, NodePainController ctrl) {
-        GraphPain fp = new GraphManager.GraphPain(grpact, ctrl);
+	public static synchronized void open(GraphActor grpact, RootLayout rootLayout) {
+        GraphPain fp = new GraphManager.GraphPain(grpact, rootLayout);
 
         // オープン中のグラフ
         map.put(appController.plrAct.getUriStr(grpact.getGraphNode()), fp);
@@ -88,7 +90,7 @@ public class GraphManager {
     public static synchronized void toFront(GraphActor grpact) {
         if (map.containsKey(appController.plrAct.getUriStr(grpact.getGraphNode()))) {
             GraphPain gp = map.get(appController.plrAct.getUriStr(grpact.getGraphNode()));
-            gp.ctrlr.toFront();
+            gp.rootlayout.toFront();
         }
     }
 
@@ -114,12 +116,10 @@ public class GraphManager {
      * @param grpact グラフ
      * @return NodePainContoroller
      */
-    public static synchronized  NodePainController getNodePainController(GraphActor grpact) {
+    public static synchronized  RootLayout getRootlayout(GraphActor grpact) {
         String key = appController.plrAct.getUriStr(grpact.getGraphNode());
 
         if (map.containsKey(key)) {
-            GraphPain fp = map.get(key);
-            return fp.ctrlr;
         }
 
         return null;

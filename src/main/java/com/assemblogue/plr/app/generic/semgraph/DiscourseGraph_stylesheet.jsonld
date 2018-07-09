@@ -1,16 +1,16 @@
- {
-  "@context" : "plr://PUBLIC/ontologies/menuContext.jsonld",
-     "restriction" :
-        {
-           "@id" : "DG",
-           "defines" : [
-              {
-                 "#Entity" : "i"
-              }
-           ],
-           "label" : {
-              "" : "Discourse Graph",
-              "ja" : "è«‡è©±ã‚°ãƒ©ãƒ•"
-           }
-        }
-  }
+{
+   "@context" : "plr://PUBLIC/ontologies/menuContext.jsonld",
+      "restriction" : 
+         {
+            "@id" : "DG",
+            "defines" : [
+               {
+                  "#Entity" : "i"
+               }
+            ],
+            "label" : {
+               "" : "Discourse Graph",
+               "ja" : "’k˜bƒOƒ‰ƒt"
+            }
+         }
+   }

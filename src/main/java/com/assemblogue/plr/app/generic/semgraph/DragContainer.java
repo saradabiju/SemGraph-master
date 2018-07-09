@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.event.EventHandler;
 import javafx.scene.input.DataFormat;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Pair;
 
 public class DragContainer implements Serializable {
@@ -14,8 +16,11 @@ public class DragContainer implements Serializable {
 	 */
 	private static final long serialVersionUID = -1890998765646621338L;
 
+
 	public static final DataFormat AddNode =
+
 			new DataFormat("application.DragIcon.add");
+
 
 	public static final DataFormat DragNode =
 			new DataFormat("application.DraggableNode.drag");

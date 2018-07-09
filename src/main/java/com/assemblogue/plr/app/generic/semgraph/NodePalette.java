@@ -16,7 +16,7 @@ public class NodePalette {
 	class NodeParts {
 		public EntityNode node;
 		public SimpleStringProperty contents;  // bindして使う
-	
+
 		NodeParts(EntityNode node, String cnt) {
 			this.node = node;
 			this.contents = new SimpleStringProperty(cnt);
@@ -44,7 +44,7 @@ public class NodePalette {
 			}
             return contents;
 		}
-		
+
 		/**
 		 * 表示用文字列の取得
 		 */
@@ -82,8 +82,10 @@ public class NodePalette {
     }
 
 	public void regist(EntityNode node) {
+		if(node != null && node.getURI() !=null) { // i added this null check to avoid error. need to check later
 		String uri = node.getURI().toString();
         regist(uri, node);
+		}
 	}
 
 	/**
@@ -120,8 +122,11 @@ public class NodePalette {
     }
 
     NodeParts getNodeParts(EntityNode node) {
+    	if(node != null && node.getURI() !=null) { // i added this null check to avoid error. need to check later
         String uri = node.getURI().toString();
         return getNodeParts(uri);
+    	}
+    	return null;
     }
 
     /**
@@ -148,8 +153,11 @@ public class NodePalette {
      */
     public void setContentsString(EntityNode node, String cnt) {
         regist(node);
+        if(node != null && node.getURI() !=null) { // i added this null check to avoid error. need to check later
         String uri = node.getURI().toString();
-        setContentsString(uri, cnt);
+
+
+        setContentsString(uri, cnt);    }
     }
 
     /**

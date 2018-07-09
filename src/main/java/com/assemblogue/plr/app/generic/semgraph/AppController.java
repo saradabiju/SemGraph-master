@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -344,7 +345,7 @@ System.out.println("Executing open graph");
 	 */
 	public void createGraph(String name) {
 		System.out.println("create graph function");
-	    open_graph(name, null);
+	    open_graph( name, null, stage);
 	}
 
 
@@ -353,10 +354,10 @@ System.out.println("Executing open graph");
 	 */
 	public void openGraph(EntityNode node) {
 		System.out.println("open graph");
-		open_graph(null, node);
+		open_graph(null, node,stage);
 	}
 
-	public void createNewGraph(String graphname) {
+/**	public void createNewGraph(String graphname) {
 
 		graphController = new GraphController();
 		System.out.println("create new graph");
@@ -372,7 +373,7 @@ System.out.println("Executing open graph");
 	 * @param node ノード
 	 */
 
-	private void open_graph(String name, EntityNode node) {
+	private void open_graph(String name, EntityNode node,Stage ownerStage) {
 		if (plrAct.getAplRootFolderNode() == null) {
 			System.out.println("Root Folder");
 			return;
@@ -385,20 +386,27 @@ System.out.println("Executing open graph");
 		}
 
 		// 表示ペインの基礎は作る
-		NodePainController nwNodeCtrl = new NodePainController(this.stage, gact);
-
+		//NodePainController nwNodeCtrl = new NodePainController(this.stage, gact);
 		// オープン中のグラフ
 		if (GraphManager.isOpend(gact)) {
 			GraphManager.toFront(gact);  // 最前面に
 			return;
 		}
 
-		GraphManager.open(gact, nwNodeCtrl);
 
+		GraphManager.open(gact, new RootLayout(gact));
+		BorderPane root = new BorderPane();
+		Scene scene = new Scene(root,640,480);
+
+		scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+		ownerStage.setTitle(gact.getGraphName());
+		ownerStage.setScene(scene);
+		ownerStage.show();
+		root.setCenter(new RootLayout(gact));
 		// Create NodePainController
-		nwNodeCtrl.createEditArea(gact.getGraphName());
-		Stage stg = nwNodeCtrl.getStage();
-		stg.show();
+		//nwNodeCtrl.createEditArea(gact.getGraphName());
+	//	Stage stg = new Stage();
+	//	stg.show();
 	}
 
     /**

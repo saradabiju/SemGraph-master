@@ -106,7 +106,7 @@ public class DragIcon extends AnchorPane{
 			addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 		        @Override public void handle(MouseEvent event) {
 
-		             getStyleClass().add("icon-grey");
+		       //      getStyleClass().add("icon-grey");
 		        }
 		        });
 		break;
